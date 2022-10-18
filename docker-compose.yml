@@ -43,7 +43,7 @@ services:
       # Conecta esse serviço com a rede que criada
       - store_manager_net
 
-  # Serviço que irá rodar o banco de dados
+  # Serviço que irá rodar o banco de dados 1
   db:
     container_name: store_manager_db
     image: mysql:8.0.23
@@ -52,7 +52,7 @@ services:
     ports:
       # Garanta que não haverá conflitos de porta com um banco que esteja
       # rodando localmente
-      - 3306:3306
+      - 33065:3306
     networks:
       # Conecta esse serviço com a rede que criada 
       - store_manager_net
