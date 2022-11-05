@@ -15,4 +15,13 @@ const insertProducts = async (productId, saleId, quantity) => {
   return insertId;
 };
 
-module.exports = { insert, insertProducts };
+// const getAll = async () => { 
+//   const [sales] = await connection.execute(
+//     'SELECT '
+//   );
+// };
+
+module.exports = {
+  insert,
+  insertProducts,
+};
