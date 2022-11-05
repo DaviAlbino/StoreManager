@@ -20,4 +20,4 @@ const salesValidate = (req, res, next) => {
   next();
 };
 
-module.exports = salesValidate;
+module.exports = { salesValidate };

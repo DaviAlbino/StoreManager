@@ -6,6 +6,6 @@ const salesValidate = require('../middlewares/sales.middleware');
 
 const salesRouter = express.Router();
 
-salesRouter.post('/', salesValidate, sales.createSale);
+salesRouter.post('/', salesValidate.salesValidate, sales.createSale);
 
 module.exports = salesRouter;
