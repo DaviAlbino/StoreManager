@@ -1,3 +1,4 @@
+// const camelize = require('camelize');
 const camelize = require('camelize');
 const connection = require('./connection');
 
@@ -24,7 +25,7 @@ const getAll = async () => {
      ORDER BY s1.sale_id ASC`,
   );
 
-  return sales;
+  return camelize(sales);
 };
 
 const findById = async (id) => { 
