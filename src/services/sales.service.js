@@ -15,9 +15,8 @@ const createSale = async (salesList) => {
 
   const salesId = await sales.insert();
 
-  await Promise.all(salesList.map(({ productId, quantity }) => (
-    sales.insertProducts(productId, salesId, quantity)
-  )));
+  await Promise.all(salesList
+    .map(({ productId, quantity }) => sales.insertProducts(productId, salesId, quantity)));
 
   return {
     type: null,
@@ -25,4 +24,18 @@ const createSale = async (salesList) => {
   };
 };
 
-module.exports = { createSale };
+const getAll = async () => { 
+  const salesList = await sales.getAll();
+  return salesList;
+};
+
+const findById = async (id) => { 
+  const sale = await sales.findById(id);
+  return sale;
+};
+
+module.exports = {
+  createSale,
+  getAll,
+  findById,
+};
