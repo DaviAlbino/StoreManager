@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/products",
-    "url": "localhost:3000/products/1",
+    "url": "localhost:3000/products",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-10-27T22:32:06.082Z",
-    "modified": "2022-11-03T16:03:06.567Z",
+    "modified": "2022-11-04T14:18:58.386Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -36,12 +36,31 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-11-03T15:59:46.398Z",
-    "modified": "2022-11-03T21:56:15.570Z",
+    "modified": "2022-11-04T22:14:37.012Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"ProdutoX\"\n}",
+      "raw": "{\n  \"name\": \"ProdutosBn\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "2c12478e-aa79-432d-a155-0c25bab37cd8",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/sales",
+    "url": "localhost:3000/sales",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-11-05T11:36:15.028Z",
+    "modified": "2022-11-05T11:37:12.205Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n  {\n    \"productId\": 1,\n    \"quantity\": 1\n  },\n  {\n    \"productId\": 2,\n    \"quantity\": 5\n  }\n]",
       "form": []
     },
     "tests": []
