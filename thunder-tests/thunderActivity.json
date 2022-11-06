@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/products",
-    "url": "localhost:3000/products/1",
+    "url": "localhost:3000/products",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-10-27T22:32:06.082Z",
-    "modified": "2022-11-06T06:14:12.383Z",
+    "modified": "2022-11-06T18:01:32.884Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -102,12 +102,12 @@
     "method": "PUT",
     "sortNum": 0,
     "created": "2022-11-05T21:15:45.838Z",
-    "modified": "2022-11-06T13:10:54.244Z",
+    "modified": "2022-11-06T15:54:14.810Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Martgdxthdh\"\n}",
+      "raw": "{\n  \"name\": \"Martelo thir\"\n}",
       "form": []
     },
     "tests": []
@@ -117,11 +117,11 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/products/1",
-    "url": "localhost:3000/products/1",
+    "url": "localhost:3000/products/",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-05T21:19:33.869Z",
-    "modified": "2022-11-05T21:21:26.800Z",
+    "modified": "2022-11-06T18:01:36.487Z",
     "headers": [],
     "params": [],
     "body": {
@@ -140,7 +140,7 @@
     "method": "PUT",
     "sortNum": 0,
     "created": "2022-11-06T01:10:30.854Z",
-    "modified": "2022-11-06T13:03:13.229Z",
+    "modified": "2022-11-06T18:01:50.852Z",
     "headers": [],
     "params": [],
     "body": {

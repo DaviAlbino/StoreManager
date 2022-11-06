@@ -17,20 +17,15 @@ const addNewProduct = async (product) => {
     'INSERT INTO StoreManager.products (name) VALUES (?)',
     [product],
   );
-  console.log(insertId);
   return insertId;
 };
 
-const update = async (id, name) => { 
-  const [result] = await connection.execute(
+const update = async (name, id) => { 
+  const [{ affectedRows }] = await connection.execute(
     'UPDATE StoreManager.products SET name = ? WHERE id = ?', [name, id],
   );
-  
-  if (result.affectedRows === 1) {
-    return { id, name };
-  }
-
-  return null;
+  // console.log('result: ', result);
+  return affectedRows;
 };
 
 const deleteProduct = async (id) => { 

@@ -18,11 +18,12 @@ const addNewProduct = async (product) => {
   };
 };
 
-const update = async (id, name) => {
-  const updatedId = await products.update(id, name);
-  if (!updatedId) return { type: 'error', message: 'Product not found' };
-  
-  return updatedId;
+const update = async (name, id) => {
+  const data = await products.update(name, id);
+  console.log(data);
+
+  if (data === 0) return { type: 'error', message: { message: 'Product not found' } };
+  return { type: null, message: { id, name } };
 };
 
 const deleteProduct = async (id) => { 

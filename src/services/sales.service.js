@@ -18,10 +18,10 @@ const createSale = async (salesList) => {
   await Promise.all(salesList
     .map(({ productId, quantity }) => sales.insertProducts(productId, salesId, quantity)));
 
-  return {
+   return {
     type: null,
     message: salesId,
-  };
+   };
 };
 
 const getAll = async () => { 

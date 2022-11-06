@@ -33,13 +33,13 @@ const addNewProduct = async (req, res) => {
 const update = async (req, res) => { 
   const { name } = req.body;
   const { id } = req.params;
-  const updatedId = await service.update(Number(id), name);
+  const data = await service.update(name, Number(id));
 
-  if (updatedId.type) {
-    return res.status(404).json({ message: updatedId.message });
-  }
+  console.log('data: ', data.message);
 
-  return res.status(200).json({ id: updatedId.id, name });
+  if (data.type) return res.status(404).json(data.message);
+
+  return res.status(200).json(data.message);
 };
 
 const deleteProduct = async (req, res) => { 
