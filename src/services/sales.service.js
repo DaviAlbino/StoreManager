@@ -34,8 +34,17 @@ const findById = async (id) => {
   return sale;
 };
 
+const deleteSale = async (id) => { 
+  const deleted = await sales.deleteSale(id);
+  if (deleted === 0) {
+    return { type: 'error', message: 'Sale not found' };
+  }
+  return { type: null, message: deleted };
+};
+
 module.exports = {
   createSale,
   getAll,
   findById,
+  deleteSale,
 };
