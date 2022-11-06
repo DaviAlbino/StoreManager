@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/products",
-    "url": "localhost:3000/products",
+    "url": "localhost:3000/products/1",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-10-27T22:32:06.082Z",
-    "modified": "2022-11-04T14:18:58.386Z",
+    "modified": "2022-11-06T04:31:28.444Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -70,11 +70,11 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/sales",
-    "url": "localhost:3000/sales",
+    "url": "localhost:3000/sales/1",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-05T18:24:29.509Z",
-    "modified": "2022-11-05T19:43:10.535Z",
+    "modified": "2022-11-06T00:40:59.125Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -91,6 +91,58 @@
     "modified": "2022-11-05T20:19:59.334Z",
     "headers": [],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "d980d017-8e29-467d-93ec-10140bb65b49",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products/1",
+    "url": "localhost:3000/products/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-11-05T21:15:45.838Z",
+    "modified": "2022-11-06T05:21:06.256Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "72bf7a1d-bb93-41f9-840d-d6950b3be4b0",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products/1",
+    "url": "localhost:3000/products/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-05T21:19:33.869Z",
+    "modified": "2022-11-05T21:21:26.800Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Martelo do Batman\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "02b9ffa7-8ace-4ae3-911c-e2eecc504ebc",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products/999",
+    "url": "localhost:3000/products/999",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-11-06T01:10:30.854Z",
+    "modified": "2022-11-06T05:20:14.722Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Martgdxthdh\"\n}",
+      "form": []
+    },
     "tests": []
   }
 ]
