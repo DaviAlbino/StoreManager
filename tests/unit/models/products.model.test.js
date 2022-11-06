@@ -6,7 +6,6 @@ const productsModel = require('../../../src/models/products.model');
 const mockProducts = require('../mocks/products.mocks.test');
 
 describe('Testes do Modelo da aplicação', () => {
-  afterEach(sinon.restore);
   it('Mostrar Lista de produtos', async () => { 
     sinon.stub(connection, 'execute').resolves([mockProducts]);
     const response = await productsModel.getAll();
@@ -28,7 +27,7 @@ describe('Testes do Modelo da aplicação', () => {
   it('teste do put de um produto', async () => {
     sinon.stub(connection, 'execute').resolves([{ insertId: 3, affectedRows: 1 }]);
     const response = await productsModel.update(3, 'Saxofone');
-    expect(response).to.deep.equal({ id: 3, name: 'Saxofone' });
+    expect(response).to.deep.equal(1);
   });
 
   it('teste do put de um produto inexistente', async () => {
@@ -36,7 +35,7 @@ describe('Testes do Modelo da aplicação', () => {
     let erro = null
    
     const data = await productsModel.update(8)
-    expect(data).to.equal(null);
+    expect(data).to.equal(0);
   });
 
   it('teste do delete', async () => { 
@@ -44,4 +43,5 @@ describe('Testes do Modelo da aplicação', () => {
     const data = await productsModel.deleteProduct(2);
     expect(data).to.equal(1);
   });
+  afterEach(sinon.restore);
 });

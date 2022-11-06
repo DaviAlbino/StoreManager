@@ -9,7 +9,6 @@ const mockProducts = require('../mocks/products.mocks.test');
 // chai.use(sinonChai);
 
 describe('Teste da camada controllers', () => { 
-  afterEach(sinon.restore);
 
   it('Retorna status de sucesso', async () => {
     const req = {};
@@ -32,4 +31,5 @@ describe('Teste da camada controllers', () => {
     expect(res.status.calledWith(200)).to.be.true;
     expect(res.json.calledWith()).to.be.true;
   });
+  afterEach(sinon.restore);
 });

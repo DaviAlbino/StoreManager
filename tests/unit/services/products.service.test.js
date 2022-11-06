@@ -7,7 +7,6 @@ const productsModel = require('../../../src/models/products.model');
 const mockProducts = require('../mocks/products.mocks.test');
 
 describe('Testes do serviço da aplicação', () => {
-  afterEach(sinon.restore);
   it('Mostrar Lista de produtos', async () => {
     sinon.stub(productsModel, 'getAll').resolves(mockProducts);
     const response = await productsService.getAll();
@@ -37,4 +36,5 @@ describe('Testes do serviço da aplicação', () => {
     const data = await productsModel.update();
     expect(data).to.be.deep.equal({ type: 'error', message: 'Product not found' });
   });
+  afterEach(sinon.restore);
 });

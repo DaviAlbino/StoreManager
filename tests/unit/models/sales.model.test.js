@@ -6,7 +6,6 @@ const connection = require('../../../src/models/connection');
 const { sales, newSale, notASale } = require('../mocks/sales.mocks.test');
 
 describe('Testes da model vendas', () => {
-  afterEach(sinon.restore);
   it('Teste do post da venda', async () => {
     sinon.stub(connection, 'execute').resolves([{ insertId: 45 }])
     sinon.stub(connection, 'query').resolves();
@@ -40,4 +39,5 @@ describe('Testes da model vendas', () => {
 
     expect(data).to.be.equal(0);
   });
+  afterEach(sinon.restore);
 })
