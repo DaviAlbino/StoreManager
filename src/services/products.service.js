@@ -10,6 +10,13 @@ const findById = async (id) => {
   return resultById;
 };
 
+const findBySearch = async (query) => {
+  const searchQuery = `%${query}%`;
+  const resultBySearch = await products.findBySearch(searchQuery);
+  console.log(resultBySearch);
+  return { type: null, message: resultBySearch };
+};
+
 const addNewProduct = async (product) => { 
   const newProduct = await products.addNewProduct(product);
   return {
@@ -40,4 +47,5 @@ module.exports = {
   addNewProduct,
   update,
   deleteProduct,
+  findBySearch,
 };

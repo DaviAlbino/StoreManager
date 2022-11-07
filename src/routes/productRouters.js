@@ -7,9 +7,9 @@ const router = express.Router();
 
 router.get('/', controller.getAll);
 router.get('/:id', controller.findById);
+router.get('/search', controller.findBySearch);
 router.post('/', validateName, controller.addNewProduct);
 router.put('/:id', validatePutName, controller.update);
 router.delete('/:id', controller.deleteProduct);
-// console.log(router.post('/', controller.addNewProduct));
 
 module.exports = router;

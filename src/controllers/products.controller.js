@@ -2,6 +2,7 @@ const service = require('../services/products.service');
 
 const getAll = async (_req, res) => { 
   const products = await service.getAll();
+  console.log(products);
 
   if (!products) {
     return res.status(404).json({
@@ -22,6 +23,12 @@ const findById = async (req, res) => {
   }
 
   return res.status(200).json(products);
+};
+
+const findBySearch = async (req, res) => { 
+  const { q } = req.query;
+  const { message } = await service.findBySearch(q);
+  return res.status(200).json(message);
 };
 
 const addNewProduct = async (req, res) => { 
@@ -48,10 +55,12 @@ const deleteProduct = async (req, res) => {
   if (type) return res.status(404).json({ message });
   return res.status(204).json();
 };
+
 module.exports = {
   getAll,
   findById,
   addNewProduct,
   update,
   deleteProduct,
+  findBySearch,
 };

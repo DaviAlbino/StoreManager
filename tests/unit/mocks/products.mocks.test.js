@@ -13,4 +13,14 @@ const mockProducts = [
   }
 ];
 
-module.exports = mockProducts;
+const createProduct = {
+  id: 4,
+  name: "ProductX"
+};
+
+const updateProduct = {
+  id: 2,
+  name: "ProdutoY"
+}
+
+module.exports = { mockProducts, createProduct, updateProduct };
